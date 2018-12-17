@@ -3,9 +3,9 @@ package common;
 public class CommonTest {
 
     public static void main(String[] args) {
-        testIntStorage();
+//        testIntStorage();
 //        testStringStorage();
-//        testCommonStorage();
+        testCommonStorage();
     }
 
     private static void testIntStorage() {
@@ -52,14 +52,14 @@ public class CommonTest {
         String valueLast = (String) strStorage.get(strStorage.getCurrentSize() - 1);
         System.out.println("Last value: " + valueLast);
 
-        Storage intStorage = new CommonStorage(3);
-        intStorage.add(1);
-        intStorage.add(2);
-        intStorage.add(3);
-
-        intStorage = strStorage;
-
-        int intValue = (int) intStorage.get(0);
-        System.out.println("First int value is " + intValue);
+//        Storage intStorage = new CommonStorage(3);
+//        intStorage.add(1);
+//        intStorage.add(2);
+//        intStorage.add(3);
+//
+//        intStorage = strStorage;
+//
+//        int intValue = (int) intStorage.get(0);
+//        System.out.println("First int value is " + intValue);
     }
 }

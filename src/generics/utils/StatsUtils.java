@@ -18,13 +18,10 @@ public class StatsUtils<T extends Number> {
 //                .getAsDouble();
                 .orElse(0.0);
 
-
-
 //        double sum = 0.0;
 //        for (int i = 0; i < nums.length; i++) {
 //            sum += nums[i].doubleValue();
 //        }
-//
 //        return sum / nums.length;
 
     }
@@ -38,8 +35,8 @@ public class StatsUtils<T extends Number> {
 //        Double[] doubles = {1.1, 2.2, 3.3, 4.4, 5.5};
         Double[] doubles = {1.0, 2.0, 3.0, 4.0, 5.0};
 
-        StatsUtils<Integer> intStats = new StatsUtils<>(new Integer[] {});
-//        StatsUtils<Integer> intStats = new StatsUtils<>(ints);
+//        StatsUtils<Integer> intStats = new StatsUtils<>(new Integer[] {});
+        StatsUtils<Integer> intStats = new StatsUtils<>(ints);
         System.out.println("avg int is " + intStats.avg());
 
         StatsUtils<Double> doubleStats = new StatsUtils<>(doubles);
