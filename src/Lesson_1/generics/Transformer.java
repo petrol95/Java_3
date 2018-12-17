@@ -1,4 +1,4 @@
-package generics;
+package Lesson_1.generics;
 
 @FunctionalInterface
 public interface Transformer<T, R> {

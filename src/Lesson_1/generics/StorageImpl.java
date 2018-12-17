@@ -1,4 +1,4 @@
-package generics;
+package Lesson_1.generics;
 
 import java.io.Serializable;
 import java.lang.reflect.Array;

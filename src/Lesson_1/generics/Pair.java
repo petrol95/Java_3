@@ -1,4 +1,4 @@
-package generics;
+package Lesson_1.generics;
 
 public class Pair<T, Err extends Exception> {
 

@@ -1,6 +1,5 @@
-package generics.utils;
+package Lesson_1.generics.utils;
 
-import java.util.OptionalDouble;
 import java.util.stream.Stream;
 
 public class StatsUtils<T extends Number> {

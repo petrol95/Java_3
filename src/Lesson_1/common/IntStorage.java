@@ -1,35 +1,35 @@
-package common;
+package Lesson_1.common;
 
-public class StringStorage {
+public class IntStorage {
 
-    private String[] data;
+    private int[] data;
     private int currentSize;
 
-    public StringStorage(int size) {
-        this.data =  new String[size];
+    public IntStorage(int size) {
+        this.data =  new int[size];
     }
 
-    public String get(int index) {
+    public int get(int index) {
         return data[index];
     }
 
-    public void add(String value) {
+    public void add(int value) {
         add(value, currentSize);
     }
 
-    public void add(String value, int index) {
+    public void add(int value, int index) {
         data[index] = value;
         currentSize++;
     }
 
     public void remove(int index) {
-        data[index] = null;
+        data[index] = 0;
         currentSize--;
     }
 
-    public boolean find(String value) {
+    public boolean find(int value) {
         for (int i = 0; i < currentSize; i++) {
-            if (value.equals(data[i])) {
+            if (value == (data[i])) {
                 return true;
             }
         }
@@ -45,9 +45,9 @@ public class StringStorage {
     public void sort() {
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data.length - 1 - i; j++) {
-                String a = data[i];
-                String b = data[j];
-                if (a.compareTo(b) > 0) {
+                int a = data[i];
+                int b = data[j];
+                if (a > b) {
                     exchange(i, j);
                 }
             }
@@ -59,7 +59,7 @@ public class StringStorage {
     }
 
     private void exchange(int i, int j) {
-        String temp = data[i];
+        int temp = data[i];
         data[i] = data[j];
         data[j] = temp;
     }

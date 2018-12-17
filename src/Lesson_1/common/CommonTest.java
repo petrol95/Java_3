@@ -1,4 +1,4 @@
-package common;
+package Lesson_1.common;
 
 public class CommonTest {
 

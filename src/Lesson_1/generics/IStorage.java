@@ -1,4 +1,4 @@
-package generics;
+package Lesson_1.generics;
 
 public interface IStorage<E extends Comparable<? super E>> {
 

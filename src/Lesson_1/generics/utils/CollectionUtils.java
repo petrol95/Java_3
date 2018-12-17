@@ -1,6 +1,6 @@
-package generics.utils;
+package Lesson_1.generics.utils;
 
-import generics.Transformer;
+import Lesson_1.generics.Transformer;
 
 import java.util.ArrayList;
 import java.util.List;

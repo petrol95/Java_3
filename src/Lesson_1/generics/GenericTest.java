@@ -1,8 +1,6 @@
-package generics;
+package Lesson_1.generics;
 
-import common.CommonStorage;
-import common.Storage;
-import generics.utils.CollectionUtils;
+import Lesson_1.generics.utils.CollectionUtils;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
