@@ -7,12 +7,16 @@ public class Box<E extends Fruit> {
     private ArrayList<E> fruits;
     private float weight;
 
-    public Box(ArrayList<E> fruits) {
+    public Box (ArrayList<E> fruits) {
         this.fruits = fruits;
         this.weight = 0;
     }
 
     public float getWeight() {
+        float weight = 0;
+        for (E fruit : this.fruits) {
+            weight += fruit.getWeight();
+        }
         return weight;
     }
 
@@ -24,39 +28,18 @@ public class Box<E extends Fruit> {
         return fruits;
     }
 
-    public void setFruits(ArrayList<E> fruits) {
-        this.fruits = fruits;
-    }
-
     public void add(E fruit) {
-        // allow add the fruit only into appropriate box
-        if (!this.getFruits().isEmpty() && !this.getFruits().get(0).getClass().equals(fruit.getClass()))
-        {
-            System.out.println("You are not allowed to mix different fruits");;
-        } else {
-            this.getFruits().add(fruit);
-            this.setWeight(this.getWeight() + fruit.getWeight());
-        }
+        this.getFruits().add(fruit);
     }
 
     public boolean compare(Box box) {
-        return this.weight == box.weight;
+        return Math.abs(this.getWeight() - box.getWeight()) < 0.0001;
     }
 
-    public boolean emptyBox(Box box) {
-        // if the box is not empty, assume box type == type of first fruit
-        if (!this.getFruits().isEmpty() &&
-                !this.getFruits().get(0).getClass().equals(box.getFruits().get(0).getClass()))
-
-        {
-            System.out.println("You are not allowed to mix different fruits");
-            return false;
-        } else {
-            box.setWeight(box.getWeight() + this.getWeight());
-            this.setWeight(0);
-            return true;
-        }
-
+    public void emptyBox(Box<E> box) {
+        box.getFruits().addAll(this.getFruits());
+        this.getFruits().clear();
+        this.setWeight(0);
     }
 
 }
