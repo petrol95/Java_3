@@ -10,25 +10,27 @@ import java.util.Random;
 public class FileStream {
 
     public static final String FILE_NAME = "12345.txt";
-    public static final String IMAGE_FILE_NAME = "C:\\Users\\krylo\\Pictures\\перерыв.png";
+//    public static final String IMAGE_FILE_NAME = "C:\\Users\\krylo\\Pictures\\перерыв.png";
+    public static final String IMAGE_FILE_NAME = "D:\\petrova_oa\\Pictures\\перерыв.png";
 
     public static void main(String[] args) throws IOException {
+
 //        byte[] bw = {71, 72};
+////        byte[] br = new byte[20];
 //        byte[] br = new byte[1];
 //
 //        System.out.println("NIO");
 //        byte[] bytes = Files.readAllBytes(Paths.get(FILE_NAME));
 //        System.out.println(Arrays.toString(bytes));
 //        System.out.println("----");
+//
 //        List<String> strings = Files.readAllLines(Paths.get(FILE_NAME));
 //        for (String string : strings) {
 //            System.out.println(string);
-//
-//
 //        }
 //
 //        System.out.println(System.lineSeparator());
-//
+
 //        writeData(bw);
 //        readData(br);
         testImage();
@@ -67,7 +69,7 @@ public class FileStream {
                 System.out.print(x + " ");
             }
 
-            System.out.println("Прочитано " + bytes.length + "байт");
+            System.out.println("Прочитано " + bytes.length + " байт");
             for (byte b : bytes) {
                 System.out.print(b + " ");
             }
@@ -84,7 +86,7 @@ public class FileStream {
         try {
             in = new FileInputStream(FILE_NAME);
             int count = in.read(br);
-            System.out.println("Прочитано " + count + "байт");
+            System.out.println("Прочитано " + count + " байт");
             for (byte b : br) {
                 System.out.print(b + " ");
             }
