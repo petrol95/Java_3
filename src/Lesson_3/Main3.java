@@ -10,19 +10,20 @@ import java.util.Date;
 public class Main3 {
 
     public static void main(String[] args) throws IOException {
-        File file = new File("testFile.txt");
+
+        File file = new File("testfile.txt");
+
         System.out.println("Is exists:" + file.exists());
         System.out.println("Length:" + file.length());
         System.out.println("Name: " + file.getName());
 
-        System.out.println("can write:" + file.canWrite());
-        System.out.println("last modified:" + new Date(file.lastModified()));
+        System.out.println("can write: " + file.canWrite());
+        System.out.println("last modified: " + new Date(file.lastModified()));
 
         System.out.println("Is dir: " + file.isDirectory());
         System.out.println("Is file: " + file.isFile());
 
         System.out.println(file.getAbsoluteFile().getParent());
-
         System.out.println("Parent name:" + file.getAbsoluteFile().getParentFile().getName());
 
         File testDir = new File("testDir");
@@ -33,10 +34,7 @@ public class Main3 {
         }
 
         Path path = Paths.get(".", "testDir2");
-
         Files.createDirectory(path);
-
-
 
     }
 }
