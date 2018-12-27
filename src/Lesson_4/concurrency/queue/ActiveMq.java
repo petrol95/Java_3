@@ -1,7 +1,5 @@
 package Lesson_4.concurrency.queue;
 
-import javax.swing.plaf.TableHeaderUI;
-
 public class ActiveMq {
 
     public static void main(String[] args) throws InterruptedException {
