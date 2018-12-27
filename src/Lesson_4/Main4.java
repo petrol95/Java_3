@@ -6,15 +6,15 @@ public class Main4 {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-//
+
 //        Thread thread = new Thread(() -> {
 //            System.out.println("Hello!");
 //            System.out.println("2:" + Thread.currentThread().getName());
 //        }, "MyThread");
-////
-////
 //        thread.start();
+////        thread.run();
 //        System.out.println("1:" + Thread.currentThread().getName());
+
 //        if (true) {
 //            return;
 //        }
@@ -22,9 +22,9 @@ public class Main4 {
 //
 //        new MyThread().start();
 
-//        testThread();
+        testThread();
 
-        testExecutorService();
+//        testExecutorService();
     }
 
     private static void testThread() throws InterruptedException, ExecutionException {
@@ -45,9 +45,9 @@ public class Main4 {
 
         t.start();
 
-        t.resume();
-        t.suspend();
-        t.stop();
+//        t.resume();
+//        t.suspend();
+//        t.stop();
 
         System.out.println("State: " + t.getState());
 
