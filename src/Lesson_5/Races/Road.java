@@ -1,5 +1,7 @@
 package Lesson_5.Races;
 
+import java.util.concurrent.Semaphore;
+
 public class Road extends Stage {
 
     public Road (int length) {
@@ -8,7 +10,7 @@ public class Road extends Stage {
     }
 
     @Override
-    public void go(Car c) {
+    public void go(Car c, Semaphore smp) {
         try {
             System.out.println(c.getName() + " начал этап: " + description);
             Thread.sleep(length / c.getSpeed() * 1000);
