@@ -1,0 +1,20 @@
+2019-52-14 12:52:34.041 [main] DEBUG Lesson_6.log.Log4j_Example - Debug Message Logged !!!
+2019-52-14 12:52:34.045 [main] INFO  Lesson_6.log.Log4j_Example - Info Message Logged !!! My name is Oleg
+2019-52-14 12:52:34.047 [main] WARN  Lesson_6.log.Log4j_Example - Info Message Logged !!! My name is Oleg, age is 25
+2019-52-14 12:52:34.047 [main] ERROR Lesson_6.log.Log4j_Example - Error Message Logged !!!
+java.lang.NullPointerException: NullError
+	at Lesson_6.log.Log4j_Example.main(Log4j_Example.java:20) [Java_3/:?]
+2019-52-14 12:52:58.675 [main] TRACE Lesson_6.log.Log4j_Example - Some long-running operation returned {}
+2019-52-14 12:52:58.679 [main] DEBUG Lesson_6.log.Log4j_Example - Debug Message Logged !!!
+2019-52-14 12:52:58.679 [main] INFO  Lesson_6.log.Log4j_Example - Info Message Logged !!! My name is Oleg
+2019-52-14 12:52:58.681 [main] WARN  Lesson_6.log.Log4j_Example - Info Message Logged !!! My name is Oleg, age is 25
+2019-52-14 12:52:58.682 [main] ERROR Lesson_6.log.Log4j_Example - Error Message Logged !!!
+java.lang.NullPointerException: NullError
+	at Lesson_6.log.Log4j_Example.main(Log4j_Example.java:20) [Java_3/:?]
+2019-22-14 14:22:55.343 [main] TRACE Lesson_6.log.Log4j_Example - Some long-running operation returned {}
+2019-22-14 14:22:55.350 [main] DEBUG Lesson_6.log.Log4j_Example - Debug Message Logged !!!
+2019-22-14 14:22:55.351 [main] INFO  Lesson_6.log.Log4j_Example - Info Message Logged !!! My name is Oleg
+2019-22-14 14:22:55.353 [main] WARN  Lesson_6.log.Log4j_Example - Info Message Logged !!! My name is Oleg, age is 25
+2019-22-14 14:22:55.353 [main] ERROR Lesson_6.log.Log4j_Example - Error Message Logged !!!
+java.lang.NullPointerException: NullError
+	at Lesson_6.log.Log4j_Example.main(Log4j_Example.java:20) [Java_3/:?]

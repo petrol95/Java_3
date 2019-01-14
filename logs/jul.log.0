@@ -1,0 +1,17 @@
+янв 14, 2019 2:22:45 PM Lesson_6.log.JUL_Example main
+INFO: Logger Name: Lesson_6.log.JUL_Example
+янв 14, 2019 2:22:45 PM Lesson_6.log.JUL_Example main
+FINEST: Logger Name: Lesson_6.log.JUL_Example. My name is Oleg
+янв 14, 2019 2:22:45 PM Lesson_6.log.JUL_Example main
+WARNING: Can cause ArrayIndexOutOfBoundsException
+янв 14, 2019 2:22:45 PM Lesson_6.log.JUL_Example main
+INFO: a = [1, 2, 3]
+янв 14, 2019 2:22:45 PM Lesson_6.log.JUL_Example main
+WARNING: Can cause ArrayIndexOutOfBoundsException
+янв 14, 2019 2:22:45 PM Lesson_6.log.JUL_Example main
+CONFIG: index is set to 4
+янв 14, 2019 2:22:45 PM Lesson_6.log.JUL_Example main
+SEVERE: Exception occur
+java.lang.ArrayIndexOutOfBoundsException: 4
+	at Lesson_6.log.JUL_Example.main(JUL_Example.java:31)
+
