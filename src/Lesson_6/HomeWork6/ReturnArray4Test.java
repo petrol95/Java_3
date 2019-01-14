@@ -3,36 +3,12 @@ package Lesson_6.HomeWork6;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
-@RunWith(Parameterized.class)
 public class ReturnArray4Test {
-
-    @Parameterized.Parameters
-    public static Collection<Collection<Object[]>> data() { // Collection<Object[]>
-        List<List<Integer>> group = new ArrayList<>();
-        group.add(Arrays.asList(1, 2, 3));
-        group.add(Arrays.asList(4, 5, 6));
-
-        return group;
-    }
-
-    private ArrayList<Integer> alIn;
-    private ArrayList<Integer> alOut;
-
-
-    public ReturnArray4Test(ArrayList<Integer> alIn, ArrayList<Integer> alOut) {
-        this.alIn.addAll(alIn);
-        this.alOut.addAll(alOut);
-    }
-
-    ReturnArray4 retArr;
+    private ReturnArray4 retArr;
 
     @Before
     public void init() {
@@ -40,7 +16,20 @@ public class ReturnArray4Test {
     }
 
     @Test
-    public void massTestAdd() {
-        Assert.assertEquals(alOut, retArr.returnArr(alIn));
+    public void test1() {
+        ArrayList<Integer> res = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
+        Assert.assertEquals(Arrays.asList(5, 6), retArr.returnArr(res));
+    }
+
+    @Test
+    public void test2() {
+        ArrayList<Integer> res = new ArrayList<>(Arrays.asList(1, 2, 4, 4, 2, 3, 4, 1, 7));
+        Assert.assertEquals(Arrays.asList(1, 7), retArr.returnArr(res));
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void testInvalidArr() {
+        ArrayList<Integer> res = new ArrayList<>(Arrays.asList(1, 2, 3, 5, 6));
+        Assert.assertEquals(Arrays.asList(0), retArr.returnArr(res));
     }
 }
