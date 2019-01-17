@@ -17,12 +17,14 @@ public class CheckArrayTest {
 
     @Test
     public void test1() {
-        Assert.assertEquals(true, checkArray.checkArr(new ArrayList<>(Arrays.asList(1, 2, 4, 7))));
+        Assert.assertEquals(true,
+                checkArray.checkArr(new ArrayList<>(Arrays.asList(1, 2, 4, 7))));
     }
 
     @Test
     public void test2() {
-        Assert.assertEquals(true, checkArray.checkArr(new ArrayList<>(Arrays.asList(1, 2, 5, 7))));
+        Assert.assertEquals(true,
+                checkArray.checkArr(new ArrayList<>(Arrays.asList(1, 2, 5, 7))));
     }
 
     @Test

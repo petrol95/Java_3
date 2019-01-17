@@ -1,8 +1,6 @@
 package Lesson_6.HomeWork6;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Student implements AutoCloseable {
 
@@ -38,10 +36,12 @@ public class Student implements AutoCloseable {
 
     public boolean insertMark(String fam, int mark) {
         try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO Marks (NAME, MARK) " +
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO Marks (NAME, MARK) " +
                     "VALUES ('" + fam + "', '" + mark + "')");
-            ps.executeUpdate();
-            return true;
+            if (statement.executeUpdate() > 0)
+                return true;
+            else
+                return false;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
@@ -66,8 +66,10 @@ public class Student implements AutoCloseable {
         try {
             PreparedStatement statement = connection.prepareStatement("UPDATE Marks SET MARK = '" + newMark +
                     "' WHERE ID = '" + id + "'");
-            statement.executeUpdate();
-            return true;
+            if (statement.executeUpdate() > 0)
+                return true;
+            else
+                return false;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

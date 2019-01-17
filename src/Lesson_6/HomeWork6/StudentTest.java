@@ -2,11 +2,7 @@ package Lesson_6.HomeWork6;
 
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.After;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class StudentTest {
     private Student student;
@@ -23,7 +19,7 @@ public class StudentTest {
 
     @Test
     public void test_update() {
-        Assert.assertEquals(true, student.changeMarkById(1, 4));
+        Assert.assertEquals(true, student.changeMarkById(2, 4));
     }
 
     @Test

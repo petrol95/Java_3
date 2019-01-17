@@ -1,15 +1,15 @@
 package Lesson_6.HomeWork6;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ReturnArray4 {
 
-    public ArrayList<Integer> returnArr(ArrayList<Integer> al) {
-        ArrayList<Integer> res = new ArrayList<>();
-        RuntimeException exception = new RuntimeException();
+    public List<Integer> returnArr(ArrayList<Integer> al) {
+        List<Integer> res = new ArrayList<>();
 
         if (al.isEmpty() || !al.contains(4)) {
-            throw exception;
+            throw new RuntimeException();
         }
 
         int k = 0;
