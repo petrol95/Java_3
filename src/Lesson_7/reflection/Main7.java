@@ -6,13 +6,15 @@ import java.util.stream.Stream;
 
 public class Main7 {
 
-    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, NoSuchFieldException, NoSuchMethodException, InvocationTargetException, InstantiationException {
-        String str = "Java";
-        Cat cat = new Cat("Barsik", "black", 4);
-        Class<? extends Cat> clazz = cat.getClass();
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, NoSuchFieldException,
+            NoSuchMethodException, InvocationTargetException, InstantiationException {
+
+//        String str = "Java";
 //        Class<? extends String> clazz = String.class;
 //        Class<?> clazz = Class.forName("java.lang.String");
 
+        Cat cat = new Cat("Barsik", "black", 4);
+        Class<? extends Cat> clazz = cat.getClass();
 
         System.out.println(clazz.getSimpleName());
         System.out.println(clazz.getName());
@@ -28,18 +30,18 @@ public class Main7 {
             System.out.println(clazz.getName() + " - Final");
         }
 
-        System.out.println("Superclasses:");
         System.out.println();
+        System.out.println("Superclasses:");
         showAllSuperclasses(clazz);
 
-        System.out.println("Interfaces:");
         System.out.println();
+        System.out.println("Interfaces:");
         for (Class<?> arg : clazz.getInterfaces()) {
             System.out.println(arg);
         }
 
-        System.out.println("Fields:");
         System.out.println();
+        System.out.println("Fields:");
 //        Field[] fields = clazz.getFields();
 
         Field ageField = clazz.getDeclaredField("age");
@@ -55,8 +57,8 @@ public class Main7 {
             System.out.println(field.getName() + " = " + field.get(cat));
         }
 
-        System.out.println("Methods:");
         System.out.println();
+        System.out.println("Methods:");
         for (Method method : clazz.getDeclaredMethods()) {
             System.out.println(String.format("%s %s %s(%s)",
                     getModifier(method.getModifiers()),
