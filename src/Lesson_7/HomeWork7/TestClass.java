@@ -5,37 +5,10 @@ import java.lang.reflect.Method;
 
 public class TestClass {
 
-    @Test(priority = 10)
-    public void testMethod1() {
-    }
-
-    @Test(priority = 2)
-    public void testMethod2() {
-    }
-
-    @Test(priority = 4)
-    public void testMethod3() {
-    }
-
-    @BeforeSuite()
-    public void firstMethod() {
-        System.out.println("firstMethod");
-    }
-
-//    @BeforeSuite()
-//    public void firstMethod2() {
-//        System.out.println("firstMethod2");
-//    }
-
-    @AfterSuite()
-    public void lastMethod() {
-        System.out.println("lastMethod");
-    }
-
     public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException,
             IllegalAccessException, NoSuchMethodException, InstantiationException {
         //start(TestClass.class);
-        start("TestClass");
+        start("Tests");
     }
 
 
@@ -61,14 +34,13 @@ public class TestClass {
             }
         }
         if (countBefore > 1 || countAfter > 1) {
-            throw new RuntimeException();
+            throw new RuntimeException("More than one method");
         }
 
         // BeforeSuite
         for (Method o : methods) {
             if (o.isAnnotationPresent(BeforeSuite.class)) {
                 o.invoke(clazz.getConstructor().newInstance());
-                o.getAnnotation(BeforeSuite.class);
             }
         }
 
@@ -89,7 +61,6 @@ public class TestClass {
         for (Method o : methods) {
             if (o.isAnnotationPresent(AfterSuite.class)) {
                 o.invoke(clazz.getConstructor().newInstance());
-                o.getAnnotation(AfterSuite.class);
             }
         }
     }
